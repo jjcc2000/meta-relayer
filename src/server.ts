@@ -3,9 +3,8 @@ import { relayTransaction } from "./relayer";
 
 const app = express();
 
-app.use(express.json()); // Parse JSON bodies
+app.use(express.json()); 
 
-// POST /relay endpoint
 app.post("/relay", async (req: Request, res: Response): Promise<any> => {
     try {
         const { to, data, gasLimit } = req.body;
